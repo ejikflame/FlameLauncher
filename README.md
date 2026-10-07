@@ -1,6 +1,6 @@
 # Modification of the launcher sashok724's v3 from Flame [![Build Status](https://travis-ci.com/GravitLauncher/Launcher.svg?branch=master)](https://travis-ci.com/GravitLauncher/Launcher)
 
-* [Discord channel](https://discord.gg/b9QG4ygY75)
+* [Discord channel]()
 
 * [See license](LICENSE)
 * [See code of conduct](CODE_OF_CONDUCT.md)
