@@ -5,6 +5,11 @@
 * [See license](LICENSE)
 * [See code of conduct](CODE_OF_CONDUCT.md)
 * [WIKI GravitLauncher](https://gravitlauncher.com)
+* [Локальная сборка и проверка интерфейса](docs/LOCAL_TEST_RU.md)
+
+GUI разрабатывается в отдельной ветке `feat/flame-gui`. Его исходники и
+оформление находятся в `components/launcher-gui` и редактируются прямо
+в этом репозитории.
 
 ## Скачать FlameLauncher
 
