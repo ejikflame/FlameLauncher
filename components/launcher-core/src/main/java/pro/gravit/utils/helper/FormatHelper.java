@@ -56,8 +56,8 @@ public class FormatHelper {
 
     public static String ansiFormatVersion(String product) {
         return new Ansi().bold(). // Setup
-                fgBright(Ansi.Color.MAGENTA).a("GravitLauncher "). // sashok724's
-                fgBright(Ansi.Color.BLUE).a("(fork sashok724's Launcher) ").
+                fgBright(Ansi.Color.MAGENTA).a("FlameLauncher "). // Project branding
+                fgBright(Ansi.Color.BLUE).a("(Era of Flame) ").
                 fgBright(Ansi.Color.CYAN).a(product). // Product
                         fgBright(Ansi.Color.WHITE).a(" v").fgBright(Ansi.Color.BLUE).a(Version.getVersion().toString()). // Version
                         fgBright(Ansi.Color.WHITE).a(" (build #").fgBright(Ansi.Color.RED).a(Version.getVersion().build).fgBright(Ansi.Color.WHITE).a(')'). // Build#
@@ -66,10 +66,10 @@ public class FormatHelper {
 
     public static String ansiFormatLicense(String product) {
         return new Ansi().bold(). // Setup
-                fgBright(Ansi.Color.MAGENTA).a("License for "). // sashok724's
+                fgBright(Ansi.Color.MAGENTA).a("License for "). // Project branding
                 fgBright(Ansi.Color.CYAN).a(product). // Product
                 fgBright(Ansi.Color.WHITE).a(" GPLv3").fgBright(Ansi.Color.WHITE).a(". SourceCode: "). // Version
-                fgBright(Ansi.Color.YELLOW).a("https://github.com/GravitLauncher/Launcher").
+                fgBright(Ansi.Color.YELLOW).a("https://github.com/ejikflame/FlameLauncher").
                 reset().toString(); // To file
     }
 
@@ -78,10 +78,10 @@ public class FormatHelper {
     }
 
     public static String formatVersion(String product) {
-        return String.format("GravitLauncher (fork sashok724's Launcher) %s v%s", product, Version.getVersion());
+        return String.format("FlameLauncher (Era of Flame) %s v%s", product, Version.getVersion());
     }
 
     public static String formatLicense(String product) {
-        return String.format("License for %s GPLv3. SourceCode: https://github.com/GravitLauncher/Launcher", product);
+        return String.format("License for %s GPLv3. SourceCode: https://github.com/ejikflame/FlameLauncher", product);
     }
 }

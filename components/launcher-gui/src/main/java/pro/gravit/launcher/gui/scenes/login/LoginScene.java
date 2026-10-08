@@ -84,11 +84,21 @@ public class LoginScene extends FxScene {
         });*/
 
         content = LookupHelper.lookup(layout, "#content");
-        if (application.guiModuleConfig.createAccountURL != null) {
+        var registerPane = LookupHelper.<javafx.scene.Node>lookup(header, "#registerPane");
+        boolean hasRegistration = application.guiModuleConfig.createAccountURL != null
+                && !application.guiModuleConfig.createAccountURL.isBlank();
+        registerPane.setVisible(hasRegistration);
+        registerPane.setManaged(hasRegistration);
+        if (hasRegistration) {
             LookupHelper.<Text>lookup(header, "#createAccount")
                         .setOnMouseClicked((e) -> application.openURL(application.guiModuleConfig.createAccountURL));
         }
-        if (application.guiModuleConfig.forgotPassURL != null) {
+        var passwordLinks = LookupHelper.<javafx.scene.Node>lookup(header, "#links");
+        boolean hasPasswordRecovery = application.guiModuleConfig.forgotPassURL != null
+                && !application.guiModuleConfig.forgotPassURL.isBlank();
+        passwordLinks.setVisible(hasPasswordRecovery);
+        passwordLinks.setManaged(hasPasswordRecovery);
+        if (hasPasswordRecovery) {
             LookupHelper.<Text>lookup(header, "#forgotPass")
                         .setOnMouseClicked((e) -> application.openURL(application.guiModuleConfig.forgotPassURL));
         }

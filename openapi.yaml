@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: GravitLauncher HTTP API
+  title: FlameLauncher HTTP API
   version: 1.0.0
   description: >
     API specification derived from client-side Java code (RequestFeatureHttpAPIImpl,

@@ -17,7 +17,7 @@ subprojects {
         publications {
             var name = project.name
             create<MavenPublication>("maven") {
-                groupId = "com.gravitlauncher.launcher"
+                groupId = "io.github.ejikflame.flamelauncher"
                 artifactId = name
                 version = project.version as String?
 

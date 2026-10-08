@@ -1,8 +1,8 @@
-# GravitLauncher GitConvention #
+# FlameLauncher GitConvention #
 
 Цель конвенции — внедрить простые, прозрачные и эффективные правила работы с Git.
 
-Разработка GravitLauncher идёт на базе [Git Flow](https://leanpub.com/git-flow/read). Подробности ниже.
+Разработка FlameLauncher идёт на базе [Git Flow](https://leanpub.com/git-flow/read). Подробности ниже.
 
 ## Ветвление ##
 

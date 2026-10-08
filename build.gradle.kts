@@ -4,7 +4,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "com.gravitlauncher.launcher"
+group = "io.github.ejikflame.flamelauncher"
 version = "5.7.13"
 
 

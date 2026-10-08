@@ -1,10 +1,11 @@
 # FlameLauncher
 
-Модификация GravitLauncher для проекта Era Of Flame.
+Лаунчер Minecraft для проекта **Era of Flame**, развиваемый **ejikflame**.
 
 * [See license](LICENSE)
 * [See code of conduct](CODE_OF_CONDUCT.md)
-* [WIKI GravitLauncher](https://gravitlauncher.com)
+* [Репозиторий и поддержка FlameLauncher](https://github.com/ejikflame/FlameLauncher)
+* [Происхождение компонентов и лицензии](docs/BRANDING_RU.md)
 * [Локальная сборка и проверка интерфейса](docs/LOCAL_TEST_RU.md)
 
 GUI разрабатывается в отдельной ветке `feat/flame-gui`. Его исходники и
@@ -21,5 +22,5 @@ GUI разрабатывается в отдельной ветке `feat/flame-
 проект через Git вместе с зависимостями:
 
 ```sh
-git clone --recurse-submodules https://github.com/ejikflame/FlameLauncher.git
+git clone --branch feat/flame-gui --recurse-submodules https://github.com/ejikflame/FlameLauncher.git
 ```

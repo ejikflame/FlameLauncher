@@ -16,6 +16,6 @@ public class PostgresSQLCoreProvider extends AbstractSQLCoreProvider {
     @Override
     public void init(LaunchServer server, AuthProviderPair pair) {
         super.init(server, pair);
-        logger.warn("Method 'postgresql' deprecated and may be removed in future release. Please use new 'sql' method: https://gravitlauncher.com/auth");
+        logger.warn("Method 'postgresql' deprecated and may be removed in future release. Please use new 'sql' method. FlameLauncher support: https://github.com/ejikflame/FlameLauncher");
     }
 }

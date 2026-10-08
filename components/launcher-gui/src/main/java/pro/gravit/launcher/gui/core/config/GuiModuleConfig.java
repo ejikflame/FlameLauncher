@@ -27,8 +27,9 @@ public class GuiModuleConfig {
 
     public static Object getDefault() {
         GuiModuleConfig config = new GuiModuleConfig();
-        config.createAccountURL = "https://gravitlauncher.com/createAccount.php";
-        config.forgotPassURL = "https://gravitlauncher.com/fogotPass.php";
+        // Configure Era of Flame account pages when the authentication service is deployed.
+        config.createAccountURL = null;
+        config.forgotPassURL = null;
         config.lazy = false;
         config.disableOfflineMode = false;
         config.autoAuth = false;

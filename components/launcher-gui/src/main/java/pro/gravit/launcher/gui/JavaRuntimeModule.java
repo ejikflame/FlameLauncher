@@ -45,7 +45,7 @@ public class JavaRuntimeModule extends LauncherModule {
                 Если вы не можете решить проблему самостоятельно обратитесь к администрации своего проекта
                 """.formatted(JVMHelper.RUNTIME_MXBEAN.getVmName(), JVMHelper.JVM_BITS, JVMHelper.OS_TYPE.name,
                               JVMHelper.OS_BITS, JVMHelper.RUNTIME_MXBEAN.getSpecVersion());
-        JOptionPane.showMessageDialog(null, message, "GravitLauncher", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, message, "FlameLauncher", JOptionPane.ERROR_MESSAGE);
     }
 
     private static void noInitMethodAlert() {
@@ -54,7 +54,7 @@ public class JavaRuntimeModule extends LauncherModule {
                 Описание:
                 При сборке отсутствовали библиотеки JavaFX. Пожалуйста установите Java с поддержкой JavaFX на стороне лаунчсервера и повторите сборку лаунчера
                 """;
-        JOptionPane.showMessageDialog(null, message, "GravitLauncher", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, message, "FlameLauncher", JOptionPane.ERROR_MESSAGE);
     }
 
     public static void noLocaleAlert(String file) {
@@ -62,7 +62,7 @@ public class JavaRuntimeModule extends LauncherModule {
                 Не найден файл языка '%s' при инициализации GUI. Дальнейшая работа невозможна.
                 Убедитесь что все файлы дизайна лаунчера присутствуют в папке runtime при сборке лаунчера
                 """.formatted(file);
-        JOptionPane.showMessageDialog(null, message, "GravitLauncher", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, message, "FlameLauncher", JOptionPane.ERROR_MESSAGE);
     }
 
     public static void errorHandleAlert(Throwable e) {
@@ -75,7 +75,7 @@ public class JavaRuntimeModule extends LauncherModule {
                 Более подробную информацию можно получить из лога
                 """.formatted(JVMHelper.JVM_VERSION, JVMHelper.JVM_BITS, e.getClass().getName(),
                               e.getMessage() == null ? "null" : e.getMessage());
-        JOptionPane.showMessageDialog(null, message, "GravitLauncher", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(null, message, "FlameLauncher", JOptionPane.ERROR_MESSAGE);
     }
 
     public static String getLauncherInfo() {

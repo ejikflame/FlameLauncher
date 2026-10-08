@@ -1,5 +1,5 @@
 
-rootProject.name = "com.gravitlauncher.launcher"
+rootProject.name = "FlameLauncher"
 
 rootDir.resolve("components").listFiles().filter { it -> it.isDirectory }.forEach {
     if(it.resolve("build.gradle.kts").exists() || it.resolve("build.gradle").exists()) {

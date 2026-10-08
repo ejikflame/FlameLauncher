@@ -266,8 +266,8 @@ public class LaunchServerStarter {
             address = "localhost:9274";
         }
         if (newConfig.projectName == null || newConfig.projectName.isEmpty()) {
-            logger.error("ProjectName null. Using MineCraft");
-            newConfig.projectName = "MineCraft";
+            logger.error("ProjectName null. Using Era of Flame");
+            newConfig.projectName = "Era of Flame";
         }
         boolean usingHttps;
         if(address.startsWith("ws://")) {
