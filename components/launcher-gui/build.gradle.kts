@@ -17,6 +17,33 @@ dependencies {
     compileOnly(libs.slf4j)
 }
 
+val headlessGui by configurations.creating
+dependencies {
+    headlessGui("org.testfx:openjfx-monocle:21.0.2")
+}
+
+tasks.test {
+    classpath += headlessGui
+    systemProperty("gui.runtime.path", layout.projectDirectory.dir("runtime").asFile.absolutePath)
+    systemProperty("glass.platform", "Monocle")
+    systemProperty("monocle.platform", "Headless")
+    systemProperty("prism.order", "sw")
+    systemProperty("java.awt.headless", "true")
+}
+
+tasks.register<JavaExec>("smokeGui") {
+    group = "verification"
+    description = "Load all GUI layouts in all locales and render the login window without a display."
+    dependsOn(tasks.testClasses)
+    mainClass.set("pro.gravit.launcher.gui.FxmlSmokeCheck")
+    classpath = sourceSets.test.get().runtimeClasspath + headlessGui
+    args(layout.projectDirectory.dir("runtime").asFile.absolutePath)
+    systemProperty("glass.platform", "Monocle")
+    systemProperty("monocle.platform", "Headless")
+    systemProperty("prism.order", "sw")
+    systemProperty("java.awt.headless", "true")
+}
+
 tasks.jar {
     archiveFileName.set("JavaRuntime.jar")
     manifest {

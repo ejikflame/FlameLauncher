@@ -8,7 +8,7 @@
 
     <AnchorPane id="header" prefHeight="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <fx:include source="../../../components/buttons/back.fxml" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="34.0" />
-        <Label id="headingDialog" layoutX="51.0" layoutY="39.0" maxWidth="400.0" prefHeight="32.0" text="%runtime.scenes.options.headingOptional" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="34.0" />
+        <Label id="headingDialog" layoutX="51.0" layoutY="39.0" maxWidth="400.0" prefHeight="32.0" text="%runtime.scenes.options.header" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="34.0" />
         <HBox id="controls" spacing="10.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="34.0">
             <fx:include source="../../../components/buttons/minimize.fxml" />
             <fx:include source="../../../components/buttons/exit.fxml" />

@@ -44,6 +44,16 @@ sh ./gradlew :components:launchserver:installDist
 При обновлении существующей установки не перезаписывай свои конфигурации:
 добавь `JavaRuntime` к `loadLauncherModules` в своём modules.json.
 
+## Проверка интерфейса без дисплея
+
+На Windows выполни `.\gradlew.bat :components:launcher-gui:smokeGui`,
+на Linux/macOS — `sh ./gradlew :components:launcher-gui:smokeGui`.
+Проверка использует JavaFX 22 и Monocle только для тестов: загружает 38
+FXML-экранов с тремя переводами (114 загрузок), открывает окно входа и
+отрисовывает его в размере 930×560. Тот же тест включён в задачу `test`
+компонента launcher-gui. Авторизация, обновления и запуск Minecraft этим
+тестом не проверяются.
+
 ## Первый запуск
 
 Открой терминал в корне скопированного дистрибутива. На Windows запусти
