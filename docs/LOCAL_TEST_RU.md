@@ -29,16 +29,19 @@ git submodule update --init --recursive
 Windows (PowerShell):
 
 ```powershell
-.\gradlew.bat :components:launchserver:installDist
+.\gradlew.bat :components:launchserver:installDist -x :modules:copyModules
 ```
 
 Linux/macOS:
 
 ```sh
-sh ./gradlew :components:launchserver:installDist
+sh ./gradlew :components:launchserver:installDist -x :modules:copyModules
 ```
 
 Дистрибутив находится в `components/launchserver/build/install/launchserver`.
+Эта команда собирает минимальный дистрибутив с GUI. Необязательные серверные
+модули из LauncherModules не копируются. Полную сборку с ними можно выполнить
+без `-x :modules:copyModules`; её работоспособность пока не проверена.
 Скопируй его целиком в отдельную папку для теста. Он включает JavaRuntime.jar,
 файлы дизайна runtime и modules.json с включённым только JavaRuntime.
 При обновлении существующей установки не перезаписывай свои конфигурации:
@@ -66,8 +69,9 @@ FXML-экранов с тремя переводами (114 загрузок), �
 прослушивание. До этой настройки ограничь входящие подключения брандмауэром.
 Это тестовый вариант без TLS, для публичного запуска требуются HTTPS/WSS.
 
-В консоли LaunchServer выполни `build`. Полученный клиент ищи в папке
-`build` тестовой установки; точный путь смотри в логе сборки. Запускай
+В консоли LaunchServer выполни `build`. При стандартном LocalUpdatesProvider
+полученный клиент находится в `updates/Launcher.jar` тестовой установки.
+Папка `build` содержит промежуточные файлы сборки. Запускай
 полученный JAR через Java с JavaFX. На первом этапе проверь открытие окна.
 По умолчанию используется RejectAuthCoreProvider: вход будет отклоняться,
 пока не настроен собственный провайдер авторизации. Запуск Minecraft требует
@@ -77,6 +81,8 @@ FXML-экранов с тремя переводами (114 загрузок), �
 поведение интерфейса — в `components/launcher-gui/src/main/java`. Код и оформление — обычные файлы
 твоего репозитория: меняй их и коммить в ветку feat/flame-gui.
 Подмодуль LauncherRuntime не используется; отдельный fork GUI не нужен.
+
+Результаты проверки текущей ветки: [BUILD_VERIFICATION_RU.md](BUILD_VERIFICATION_RU.md).
 
 Подключение интерфейса не исправляет уязвимости из аудита. Не публикуй эту
 тестовую установку до исправления проверки обновлений и распаковки архивов.
