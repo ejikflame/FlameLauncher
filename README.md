@@ -5,6 +5,7 @@
 * [See license](LICENSE)
 * [See code of conduct](CODE_OF_CONDUCT.md)
 * [WIKI](https://gravitlauncher.com)
+* [Локальная сборка и проверка интерфейса](docs/LOCAL_TEST_RU.md)
 * Get it (requires cURL):
 
 ```sh

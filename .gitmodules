@@ -1,3 +1,6 @@
 [submodule "modules"]
 	path = modules
 	url = https://github.com/GravitLauncher/LauncherModules.git
+[submodule "launcher-gui"]
+	path = launcher-gui
+	url = https://github.com/GravitLauncher/LauncherRuntime.git

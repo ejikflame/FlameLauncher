@@ -83,6 +83,7 @@ val copyProguardLibs by tasks.registering(Copy::class) {
 
 application {
     evaluationDependsOn(":modules")
+    evaluationDependsOn(":components:launcher-gui")
     evaluationDependsOn(":components:serverwrapper")
 
     mainClass = "pro.gravit.launchserver.LaunchServerStarter"
@@ -113,6 +114,20 @@ application {
 
     applicationDistribution.from(project(":modules").tasks.named("copyModules").map { it.outputs.files }) {
         into("modules")
+    }
+
+    applicationDistribution.from(project(":components:launcher-gui").tasks.named("jar")) {
+        into("modules")
+    }
+
+    applicationDistribution.from(rootProject.layout.projectDirectory.dir("launcher-gui/runtime")) {
+        into("runtime")
+    }
+
+    applicationDistribution.from(rootProject.layout.projectDirectory.file("config/local-test/modules.json"))
+
+    applicationDistribution.from(rootProject.layout.projectDirectory.file("launcher-gui/LICENSE")) {
+        into("licenses/launcher-gui")
     }
 
     applicationDistribution.from(project(":components:serverwrapper").tasks.named("fatJar").map { it.outputs.files }) {
